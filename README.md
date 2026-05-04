@@ -1,9 +1,9 @@
 # Project 2 Copy: Giga Pet DevTools Lab
 
-This folder is a copy of Project 2 with practical examples from the Chrome DevTools Console and Sources demos added directly into the app.
 
 New pages URL:
 https://lod12321.github.io/comp484-hw10/
+
 Original project URL from the previous README:
 https://lod12321.github.io/comp484-project2/
 
