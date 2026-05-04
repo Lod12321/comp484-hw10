@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chrome DevTools Implementation Report</title>
+    <style>
+      body {
+        color: #17201d;
+        font-family: Arial, sans-serif;
+        line-height: 1.45;
+        margin: 40px;
+      }
+
+      h1 {
+        font-size: 30px;
+        margin-bottom: 4px;
+      }
+
+      h2 {
+        border-bottom: 2px solid #d7ddd2;
+        font-size: 20px;
+        margin-top: 30px;
+        padding-bottom: 6px;
+      }
+
+      p,
+      li {
+        font-size: 12px;
+      }
+
+      code {
+        background: #eef2ea;
+        border-radius: 4px;
+        padding: 2px 4px;
+      }
+
+      img {
+        border: 1px solid #c8d0ca;
+        border-radius: 6px;
+        margin: 8px 0 18px;
+        max-width: 100%;
+      }
+
+      .meta {
+        color: #4f6f61;
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .page-break {
+        break-before: page;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chrome DevTools Implementation Report</h1>
+    <p class="meta">Project 2 Copy: Giga Pet DevTools Lab</p>
+
+    <p>
+      I reviewed the Chrome DevTools Console logging tutorial and JavaScript debugging tutorial, then added practical examples to a copied Project 2 folder named <code>project2-devtools-copy</code>. The original Giga Pet game remains present, and the new lab sections let a user trigger the same Console and Sources workflows from inside the project.
+    </p>
+
+    <h2>Documentation Reviewed</h2>
+    <ul>
+      <li>Chrome DevTools Console logging tutorial: https://developer.chrome.com/docs/devtools/console/log/</li>
+      <li>Chrome DevTools JavaScript debugging tutorial: https://developer.chrome.com/docs/devtools/javascript/</li>
+    </ul>
+
+    <h2>Console Message Logging</h2>
+    <p>
+      The Message Logging Examples section adds buttons for <code>console.log()</code>, <code>console.warn()</code>, <code>console.error()</code>, <code>console.table()</code>, <code>console.group()</code>, and a custom styled <code>console.log()</code> message. The warning example also calls <code>console.trace()</code> so the stack trace can be expanded in DevTools.
+    </p>
+    <img src="screenshot-devtools-lab.png" alt="Desktop screenshot of the Giga Pet DevTools Lab">
+
+    <h2>Browser Messages And Filtering</h2>
+    <p>
+      The Errors And Violations section includes a missing fetch request for a 404 network error, an intentional TypeError from writing to a missing DOM node, and a long click handler that causes a browser violation message. The Filter Message Practice section logs messages with different levels and searchable text so the Console can be filtered by log level, text, regular expression, message source, and user messages.
+    </p>
+
+    <h2>Sources Debugging Workflow</h2>
+    <p>
+      The Sources Panel section reproduces the debugging tutorial's string-concatenation bug with pet treat inputs. With values <code>5</code> and <code>1</code>, the Reproduce Bug button shows <code>5 + 1 = 51</code>. The function <code>calculatePetSnackTotal()</code> is intentionally breakpoint-friendly: a line-of-code breakpoint can be placed where <code>sum</code> is assigned, then the Scope pane, Watch expression <code>typeof sum</code>, and Console drawer expression <code>Number(treats) + Number(bonusTreats)</code> can be used to inspect and test the fix. The Apply Fix button uses numeric conversion and returns <code>6</code>.
+    </p>
+    <img src="screenshot-devtools-lab-mobile.png" alt="Responsive screenshot of the DevTools Lab">
+
+    <h2>Requirement Coverage</h2>
+    <ul>
+      <li>Message Logging: Log Info, Log Warning, Log Error, Log Table, Log Group, Log Custom.</li>
+      <li>Browser Messages: view browser messages, cause 404, cause TypeError, cause violation.</li>
+      <li>Filter Messages: filter by log level, text, regular expression, message source, and user messages.</li>
+      <li>Sources UI: reproduce a bug, inspect Sources, pause with breakpoints, set a line breakpoint, check variable values, use Scope, Watch Expressions, Console, and apply a fix.</li>
+    </ul>
+
+    <h2>Files Changed In The Copy</h2>
+    <ul>
+      <li><code>index.html</code>: added DevTools lab controls and report link.</li>
+      <li><code>style.css</code>: added responsive layout and lab styling.</li>
+      <li><code>script.js</code>: added all Console, browser-message, filtering, and Sources debugging examples.</li>
+      <li><code>assets/devtools-implementation-report.pdf</code>: this PDF report.</li>
+    </ul>
+  </body>
+</html>

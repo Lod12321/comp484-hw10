@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Giga Pet DevTools Lab</title>
+    <meta name="description" content="Project 2 copy with Chrome DevTools console and sources examples">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">Project 2 Copy</p>
+        <h1>Giga Pet DevTools Lab</h1>
+      </div>
+      <a class="asset-link" href="assets/devtools-implementation-report.pdf">Implementation PDF</a>
+    </header>
+
+    <main>
+      <section class="pet-panel" aria-labelledby="pet-title">
+        <div class="pet-image-container">
+          <img class="pet-image" src="images/froakie-happy.webp" alt="Froakie virtual pet">
+        </div>
+        <div class="dashboard">
+          <h2 id="pet-title">Froakie Dashboard</h2>
+          <div>Name: <strong><span class="name"></span></strong></div>
+          <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
+          <div>Happiness: <strong><span class="happiness"></span> head nods per min</strong></div>
+          <div>Mood: <strong><span class="mood">Happy</span></strong></div>
+          <div class="pet-notification" aria-live="polite"></div>
+          <div class="button-container">
+            <button class="pet-button" data-action="feed">Feed</button>
+            <button class="pet-button" data-action="pet">Pet</button>
+            <button class="pet-button" data-action="play">Play</button>
+            <button class="pet-button" data-action="rest">Rest</button>
+            <button class="pet-button" data-action="ignore">Ignore</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="lab-panel" aria-labelledby="console-title">
+        <div class="section-heading">
+          <p class="eyebrow">Console Panel</p>
+          <h2 id="console-title">Message Logging Examples</h2>
+        </div>
+        <div class="tool-grid">
+          <button data-demo="log-info">Log Info</button>
+          <button data-demo="log-warning">Log Warning</button>
+          <button data-demo="log-error">Log Error</button>
+          <button data-demo="log-table">Log Table</button>
+          <button data-demo="log-group">Log Group</button>
+          <button data-demo="log-custom">Log Custom</button>
+        </div>
+      </section>
+
+      <section class="lab-panel" aria-labelledby="browser-title">
+        <div class="section-heading">
+          <p class="eyebrow">Browser Messages</p>
+          <h2 id="browser-title">Errors And Violations</h2>
+        </div>
+        <div class="tool-grid">
+          <button data-demo="cause-404">Cause 404 Network Error</button>
+          <button data-demo="cause-typeerror">Cause TypeError</button>
+          <button data-demo="cause-violation">Cause Violation</button>
+        </div>
+      </section>
+
+      <section class="lab-panel" aria-labelledby="filter-title">
+        <div class="section-heading">
+          <p class="eyebrow">Console Filters</p>
+          <h2 id="filter-title">Filter Message Practice</h2>
+        </div>
+        <div class="tool-grid">
+          <button data-demo="filter-seed">Create Filter Messages</button>
+          <button data-demo="user-message">Log User Message</button>
+        </div>
+      </section>
+
+      <section class="lab-panel" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <p class="eyebrow">Sources Panel</p>
+          <h2 id="sources-title">Reproduce, Pause, Inspect, Fix</h2>
+        </div>
+        <div class="debugger-demo">
+          <label>
+            Treats
+            <input id="treat-count" type="number" value="5">
+          </label>
+          <label>
+            Bonus treats
+            <input id="bonus-count" type="number" value="1">
+          </label>
+          <button data-demo="buggy-add">Reproduce Bug</button>
+          <button data-demo="apply-fix">Apply Fix</button>
+          <output id="snack-result">5 + 1 = 51</output>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
